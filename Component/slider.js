@@ -80,7 +80,7 @@ function Slider () {
             }
 
             <div className={style.dots}>
-                <FaCircle style={slide == 1 && {color: "orange"}}/><div className={style.line}></div><FaCircle style={slide == 2 && {color: "orange"}}/><div className={style.line}></div><FaCircle style={slide == 3 && {color: "orange"}}/>
+                <FaCircle className={style.dot} style={slide == 1 && {color: "orange"}} onClick={() => setSlide(1)} /><div className={style.line}></div><FaCircle className={style.dot} style={slide == 2 && {color: "orange"}} onClick={() => setSlide(2)} /><div className={style.line}></div><FaCircle className={style.dot} style={slide == 3 && {color: "orange"}} onClick={() => setSlide(3)} />
           </div>
         </div>
     </div>
