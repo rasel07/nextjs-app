@@ -1,9 +1,10 @@
+import Review from '../Component/Review/Review'
 import Slider from '../Component/slider'
-// import '../styles/globals.css'
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Slider />
+    <Review />
     // <Component {...pageProps} />
   )
   
