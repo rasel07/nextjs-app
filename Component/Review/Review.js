@@ -6,28 +6,31 @@ const Review = () => {
     const [slide, setSlide] = useState([0, 1, 2, 3]);
 
     const handleIncrement = () => {
-        slide.map((e, index, array) => {
+        var TempArray = [];
+        slide.map((e, index) => {
             if(e > 6){
                 e=-1;
-                array[index] = e+1;
-                setSlide(array);
+                TempArray[index] = e+1;
             }
-            array[index] = e+1;
-            setSlide(array);
+            TempArray[index] = e+1;
         })
+        // for(let i=slide[0]; i < slide.length; i++){
+        //     TempArray.push(i+1);
+        // }
+        setSlide(TempArray);
         console.log(slide);
     }
 
     const handleDecrement = () => {
+        var TempArray = [];
         slide.map((e, index, array) => {
             if( e <= 0){
                 e = 8;
-                array[index] = e-1;
-                setSlide(array);
+                TempArray[index] = e-1;
             }
-            array[index] = e-1;
-            setSlide(array);
+            TempArray[index] = e-1;
         })
+        setSlide(TempArray);
         console.log(slide);
     }
     const Slide1 = () => {
@@ -95,7 +98,7 @@ const Review = () => {
 
     const Slide8 = () => {
         return (
-            <div>
+            <div className={style.slide}>
                 <h1>Heding 8</h1>
                 <p>The quick brown fox jumps over the lazy dog.The quick brown fox jumps over the lazy dog.The quick brown fox jumps over the lazy dog.</p>
             </div>
